@@ -1,0 +1,7 @@
+# copias de respaldo que hace el editor
+*.bak
+
+# archivos del sistema
+Thumbs.db
+desktop.ini
+.DS_Store
