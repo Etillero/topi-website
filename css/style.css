@@ -63,19 +63,22 @@
   .photo{position:relative; background:linear-gradient(158deg,#f0efec 0%,#e4e3df 55%,#d9d8d3 100%); overflow:hidden;}
   .photo::before{content:""; position:absolute; inset:0; background:repeating-linear-gradient(112deg, rgba(255,255,255,.5) 0 1px, transparent 1px 56px);}
   .photo.tag::after{
-    content:"Foto de obra"; position:absolute; left:16px; top:16px;
+    content:"Reference photo"; position:absolute; left:16px; top:16px;
     font-family:"Inter",sans-serif; font-size:9px; letter-spacing:.14em; text-transform:uppercase;
     color:rgba(40,38,32,.42); border:1px solid rgba(40,38,32,.2); padding:3px 8px;
   }
 
-  /* fotos de referencia (no son obras de TOPI) */
+  /* reference photos (not actual TOPI job sites) */
   .photo.img::before{display:none;}
   .img-kitchen{background-image:url('../img/cocina-1.jpg'); background-size:cover; background-position:center;}
+  .team .shot.img-team-ph1{background-image:url('../img/team-placeholder-1.jpg'); background-size:cover; background-position:center top;}
+  .team .shot.img-team-ph2{background-image:url('../img/team-placeholder-2.jpg'); background-size:cover; background-position:center top;}
+  .team .shot.img-team-ph3{background-image:url('../img/team-placeholder-3.jpg'); background-size:cover; background-position:center top;}
   .img-bed{background-image:url('../img/habitacion.jpg'); background-size:cover; background-position:center;}
   .img-kitchen2{background-image:url('../img/cocina-2.jpg'); background-size:cover; background-position:center;}
   .img-bath{background-image:url('../img/bano.jpg'); background-size:cover; background-position:center;}
   .photo, .slide, .ba{border-radius:12px;}
-  .photo.tag::after{content:"Foto de referencia"; background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
+  .photo.tag::after{content:"Reference photo"; background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
   .shot-tag{background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
   .hero-shot{border-radius:12px;}
   .btn, .btn-line{border-radius:999px;}
@@ -184,6 +187,7 @@
   .about{display:grid; grid-template-columns:.85fr 1.15fr; gap:68px; align-items:center;}
   .about h3{font-weight:700; font-size:13px; letter-spacing:.14em; color:var(--gold-ink); margin-bottom:16px;}
   .about p{font-size:16px; line-height:1.85; color:var(--ink-soft);}
+  .about p + p{margin-top:16px;}
   .about .photo{height:420px;}
   .stats{display:grid; grid-template-columns:repeat(3,1fr); margin-top:46px; border-top:1px solid var(--hair-2);}
   .stats div{padding:28px 30px 0; border-right:1px solid var(--hair-2);}
@@ -264,7 +268,11 @@
   .contact{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
   .contact h2{font-weight:800; font-size:clamp(26px,3.8vw,42px); line-height:1.05; letter-spacing:1.5px; max-width:13ch; margin-bottom:20px;}
   .contact .lede{font-size:15.5px; line-height:1.8; color:var(--ink-soft); margin-bottom:28px; max-width:40ch;}
-  .cinfo{border-top:1px solid var(--hair-2); padding-top:22px; display:flex; flex-direction:column; gap:12px; font-size:14px; color:var(--ink-soft);}
+  .cinfo{border-top:1px solid var(--hair-2); padding-top:22px; display:flex; flex-direction:column; gap:18px; font-size:14px; color:var(--ink-soft);}
+  .cinfo div{display:flex; flex-direction:column; gap:5px;}
+  .cinfo b{font-family:"Montserrat",sans-serif; font-weight:700; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-ink);}
+  .cinfo a{color:var(--ink-soft); text-decoration:none;}
+  .cinfo a:hover{color:var(--navy);}
   form.quote-form{background:var(--surface); border:1px solid var(--hair-2); padding:34px;}
   form.quote-form h3{font-weight:800; font-size:16px; letter-spacing:1.2px; margin-bottom:6px;}
   form.quote-form .note{font-size:12.5px; color:var(--ink-muted); margin-bottom:22px;}

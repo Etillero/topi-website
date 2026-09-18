@@ -61,6 +61,7 @@
   function runCounters(){
     statsEl.querySelectorAll('b').forEach(function(b){
       var to = parseInt(b.getAttribute('data-to'),10), suf = b.getAttribute('data-suffix') || '';
+      if(isNaN(to)) return; // no confirmed number yet — leave the placeholder text as-is
       if(reduce){ b.textContent = to + suf; return; }
       b.textContent = '0' + suf;
       var t0 = null, dur = 1200;
@@ -123,7 +124,7 @@
   var qi = 0, qtimer;
   quotes.forEach(function(_, i){
     var b = document.createElement('button');
-    b.setAttribute('aria-label','Reseña ' + (i+1));
+    b.setAttribute('aria-label','Review ' + (i+1));
     if(i === 0) b.classList.add('on');
     b.addEventListener('click', function(){ showQuote(i); startQuotes(); });
     qdots.appendChild(b);
