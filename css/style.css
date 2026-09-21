@@ -75,8 +75,11 @@
   .team .shot.img-team-ph2{background-image:url('../img/team-placeholder-2.jpg'); background-size:cover; background-position:center top;}
   .team .shot.img-team-ph3{background-image:url('../img/team-placeholder-3.jpg'); background-size:cover; background-position:center top;}
   .img-bed{background-image:url('../img/habitacion.jpg'); background-size:cover; background-position:center;}
+  .img-kitchen3{background-image:url('../img/kitchen-white.jpg'); background-size:cover; background-position:center;}
   .img-kitchen2{background-image:url('../img/cocina-2.jpg'); background-size:cover; background-position:center;}
   .img-bath{background-image:url('../img/bano.jpg'); background-size:cover; background-position:center;}
+  .img-exterior1{background-image:url('../img/exterior-house.jpg'); background-size:cover; background-position:center;}
+  .img-deck-stairs{background-image:url('../img/deck-stairs.jpg'); background-size:cover; background-position:center;}
   .photo, .slide, .ba{border-radius:12px;}
   .photo.tag::after{content:"Reference photo"; background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
   .shot-tag{background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
@@ -199,8 +202,8 @@
   /* ---- ANTES / DESPUÉS ---- */
   .ba{position:relative; height:480px; overflow:hidden; user-select:none; touch-action:none; cursor:ew-resize;}
   .ba .layer{position:absolute; inset:0;}
-  .ba .after{background-image:url('../img/bano.jpg'); background-size:cover; background-position:center;}
-  .ba .before{background-image:url('../img/bano.jpg'); background-size:cover; background-position:center; width:50%; filter:grayscale(.85) brightness(.82) contrast(.92);}
+  .ba .after{background-image:url('../img/deck-after.jpg'); background-size:cover; background-position:center;}
+  .ba .before{background-image:url('../img/deck-before.jpg'); background-size:cover; background-position:center; width:50%; filter:grayscale(.85) brightness(.82) contrast(.92);}
   
   .ba .tagl{
     position:absolute; top:18px; z-index:4;
@@ -273,6 +276,7 @@
   .cinfo b{font-family:"Montserrat",sans-serif; font-weight:700; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-ink);}
   .cinfo a{color:var(--ink-soft); text-decoration:none;}
   .cinfo a:hover{color:var(--navy);}
+  .contact-logo{display:block; margin-top:30px; height:clamp(80px,10vw,118px); width:auto;}
   form.quote-form{background:var(--surface); border:1px solid var(--hair-2); padding:34px;}
   form.quote-form h3{font-weight:800; font-size:16px; letter-spacing:1.2px; margin-bottom:6px;}
   form.quote-form .note{font-size:12.5px; color:var(--ink-muted); margin-bottom:22px;}
@@ -289,7 +293,6 @@
 
   /* ---- FOOTER ---- */
   footer.site-footer{background:var(--surface); border-top:1px solid var(--hair-2); padding:66px 0 0;}
-  .footmark{font-family:"Montserrat",sans-serif; font-weight:800; text-transform:uppercase; font-size:clamp(28px,6vw,58px); letter-spacing:4px; line-height:1; color:var(--bone-2); margin-bottom:46px;}
   .foot{display:grid; grid-template-columns:1.7fr 1fr 1fr; gap:44px; padding-bottom:42px;}
   .foot h4{font-weight:700; font-size:11px; letter-spacing:.18em; margin-bottom:16px;}
   .foot p, .foot li{font-size:13.5px; color:var(--ink-muted); line-height:2;}
@@ -369,6 +372,5 @@
     .tabs button{padding:13px 16px 11px; font-size:11px;}
     .tabs button:first-child{padding-left:0;}
     .carousel-top{flex-direction:column; align-items:flex-start; gap:14px;}
-    .footmark{letter-spacing:2px;}
     .totop{right:14px; bottom:14px;}
   }
