@@ -82,6 +82,7 @@
   .img-deck-stairs{background-image:url('../img/deck-stairs.jpg'); background-size:cover; background-position:center;}
   .img-interior-work{background-image:url('../img/interior-work.jpg'); background-size:cover; background-position:center;}
   .img-deck-wide{background-image:url('../img/deck-wide.jpg'); background-size:cover; background-position:center;}
+  .img-house-backyard{background-image:url('../img/house-backyard.jpg'); background-size:cover; background-position:center;}
   .photo, .slide, .ba{border-radius:12px;}
   .photo.tag::after{content:"Reference photo"; background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
   .shot-tag{background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
