@@ -213,7 +213,7 @@
   .ba{position:relative; height:480px; overflow:hidden; user-select:none; touch-action:none; cursor:ew-resize;}
   .ba .layer{position:absolute; inset:0;}
   .ba .after{background-image:url('../img/basement-after.jpg'); background-size:contain; background-position:center; background-repeat:no-repeat; background-color:#e0d8c8;}
-  .ba .before{background-image:url('../img/interior-before.jpg'); background-size:contain; background-position:center; background-repeat:no-repeat; background-color:#e0d8c8; clip-path:inset(0 50% 0 0);}
+  .ba .before{background-image:url('../img/interior-before.jpg'); background-size:contain; background-position:center; background-repeat:no-repeat; background-color:#e0d8c8; width:50%;}
   
   .ba .tagl{
     position:absolute; top:18px; z-index:4;
