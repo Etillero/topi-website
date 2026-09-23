@@ -212,8 +212,8 @@
   /* ---- ANTES / DESPUÉS ---- */
   .ba{position:relative; height:480px; overflow:hidden; user-select:none; touch-action:none; cursor:ew-resize;}
   .ba .layer{position:absolute; inset:0;}
-  .ba .after{background-image:url('../img/deck-after-rich.jpg'); background-size:cover; background-position:center 75%;}
-  .ba .before{background-image:url('../img/deck-render.jpg'); background-size:cover; background-position:center; width:50%;}
+  .ba .after{background-image:url('../img/basement-after.jpg'); background-size:cover; background-position:center 75%;}
+  .ba .before{background-image:url('../img/interior-before.jpg'); background-size:cover; background-position:center; width:50%;}
   
   .ba .tagl{
     position:absolute; top:18px; z-index:4;
