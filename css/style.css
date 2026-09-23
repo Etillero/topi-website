@@ -71,7 +71,7 @@
   /* reference photos (not actual TOPI job sites) */
   .photo.img::before{display:none;}
   .img-kitchen{background-image:url('../img/cocina-1.jpg'); background-size:cover; background-position:center;}
-  .img-kitchen-story{background-image:url('../img/kitchen-story.jpg'); background-size:cover; background-position:center;}
+  .img-kitchen-story{background-image:url('../img/kitchen-story-v2.jpg'); background-size:cover; background-position:center;}
   .team .shot.img-team-ph1{background-image:url('../img/team-placeholder-1.jpg'); background-size:cover; background-position:center top;}
   .team .shot.img-team-ph2{background-image:url('../img/team-placeholder-2.jpg'); background-size:cover; background-position:center top;}
   .team .shot.img-team-ph3{background-image:url('../img/team-placeholder-3.jpg'); background-size:cover; background-position:center top;}
@@ -82,6 +82,8 @@
   .img-exterior1{background-image:url('../img/exterior-house-v2.jpg'); background-size:cover; background-position:center;}
   .img-deck-stairs{background-image:url('../img/deck-stairs.jpg'); background-size:cover; background-position:center;}
   .img-bar-finished{background-image:url('../img/bar-finished-v2.jpg'); background-size:cover; background-position:center;}
+  .img-materials{background-image:url('../img/materials-quikrete.jpg'); background-size:cover; background-position:center top;}
+  .img-fence-progress{background-image:url('../img/fence-progress.jpg'); background-size:cover; background-position:center;}
   .img-interior-work{background-image:url('../img/interior-work.jpg'); background-size:cover; background-position:center;}
   .img-deck-wide{background-image:url('../img/deck-wide.jpg'); background-size:cover; background-position:center;}
   .photo, .slide, .ba{border-radius:12px;}
