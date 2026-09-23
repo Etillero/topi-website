@@ -85,7 +85,7 @@
   function setBA(clientX){
     var r = ba.getBoundingClientRect();
     var pct = Math.max(4, Math.min(96, ((clientX - r.left) / r.width) * 100));
-    baBefore.style.width = pct + '%';
+    baBefore.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
     baHandle.style.left = pct + '%';
   }
   ba.addEventListener('pointerdown', function(e){ dragging = true; ba.setPointerCapture(e.pointerId); setBA(e.clientX); });
