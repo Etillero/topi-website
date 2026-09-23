@@ -83,7 +83,7 @@
   .img-kitchen2{background-image:url('../img/cocina-2.jpg'); background-size:cover; background-position:center;}
   .img-bath{background-image:url('../img/bano.jpg'); background-size:cover; background-position:center;}
   .img-bath-real{background-image:url('../img/bathroom-remodel-client.jpg'); background-size:cover; background-position:center;}
-  .img-bath-before{ /* pendiente: foto del antes del baño */ }
+  .img-bath-before{background-image:url('../img/bathroom-before-render.png');}
   .img-exterior1{background-image:url('../img/exterior-remodeling-client.png'); background-size:cover; background-position:center;}
   .img-deck-stairs{background-image:url('../img/deck-stairs.jpg'); background-size:cover; background-position:center;}
   .img-bar-finished{background-image:url('../img/bar-finished-v2.jpg'); background-size:cover; background-position:center;}
