@@ -81,7 +81,7 @@
   .img-bath{background-image:url('../img/bano.jpg'); background-size:cover; background-position:center;}
   .img-exterior1{background-image:url('../img/exterior-house.jpg'); background-size:cover; background-position:center;}
   .img-deck-stairs{background-image:url('../img/deck-stairs.jpg'); background-size:cover; background-position:center;}
-  .img-bar-finished{background-image:url('../img/bar-finished.jpg'); background-size:cover; background-position:center;}
+  .img-bar-finished{background-image:url('../img/bar-finished-v2.jpg'); background-size:cover; background-position:center;}
   .img-interior-work{background-image:url('../img/interior-work.jpg'); background-size:cover; background-position:center;}
   .img-deck-wide{background-image:url('../img/deck-wide.jpg'); background-size:cover; background-position:center;}
   .photo, .slide, .ba{border-radius:12px;}
@@ -207,8 +207,8 @@
   /* ---- ANTES / DESPUÉS ---- */
   .ba{position:relative; height:480px; overflow:hidden; user-select:none; touch-action:none; cursor:ew-resize;}
   .ba .layer{position:absolute; inset:0;}
-  .ba .after{background-image:url('../img/deck-after.jpg'); background-size:cover; background-position:center;}
-  .ba .before{background-image:url('../img/deck-before.jpg'); background-size:cover; background-position:center; width:50%;}
+  .ba .after{background-image:url('../img/deck-after-rich.jpg'); background-size:cover; background-position:center 75%;}
+  .ba .before{background-image:url('../img/deck-render.jpg'); background-size:cover; background-position:center; width:50%;}
   
   .ba .tagl{
     position:absolute; top:18px; z-index:4;
