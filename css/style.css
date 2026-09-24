@@ -179,7 +179,7 @@
   }
   .tabs button:first-child{padding-left:0;}
   .tabs button.on{color:var(--navy); border-bottom-color:var(--gold);}
-  .panel{display:none; grid-template-columns:1fr 1.05fr; gap:56px; align-items:center;}
+  .panel{display:none; grid-template-columns:1fr 1.05fr; gap:56px; align-items:start;}
   .panel.on{display:grid;}
   .panel h3{font-weight:800; font-size:clamp(20px,2.4vw,27px); letter-spacing:1.5px; line-height:1.15; margin-bottom:16px;}
   .panel p{font-size:15.5px; line-height:1.8; color:var(--ink-soft); margin-bottom:22px; max-width:44ch;}
