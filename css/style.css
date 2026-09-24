@@ -47,10 +47,10 @@
     display:inline-flex; align-items:center; justify-content:center; text-decoration:none;
     font-family:"Montserrat",sans-serif; font-weight:600; font-size:12px;
     letter-spacing:.1em; text-transform:uppercase;
-    padding:16px 29px; border:1px solid var(--gold); color:var(--navy); background:var(--bone-2); cursor:pointer;
-    transition:border-color .18s ease, background .18s ease;
+    padding:16px 29px; border:1px solid var(--gold-ink); color:var(--gold-ink); background:var(--bone-2); cursor:pointer;
+    transition:border-color .18s ease, background .18s ease, color .18s ease;
   }
-  .btn-line:hover{border-color:var(--gold-ink); background:var(--bone);}
+  .btn-line:hover{border-color:var(--gold-deep); color:var(--gold-deep); background:var(--bone);}
 
   .pend{
     display:inline-block; vertical-align:middle;
