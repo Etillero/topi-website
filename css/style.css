@@ -216,8 +216,8 @@
   /* ---- ANTES / DESPUÉS ---- */
   .ba{position:relative; height:480px; overflow:hidden; user-select:none; touch-action:none; cursor:ew-resize;}
   .ba .layer{position:absolute; inset:0;}
-  .ba .after{background-image:url('../img/interior-before.jpg'); background-size:cover; background-position:center 75%;}
-  .ba .before{background-image:url('../img/basement-after.jpg'); background-size:cover; background-position:center; width:70%;}
+  .ba .after{background-image:url('../img/basement-after.jpg'); background-size:cover; background-position:center;}
+  .ba .before{background-image:url('../img/interior-before.jpg'); background-size:cover; background-position:center 75%; width:30%;}
   
   .ba .tagl{
     position:absolute; top:18px; z-index:4;
@@ -226,7 +226,7 @@
     background:rgba(255,255,255,.9); padding:7px 12px;
   }
   .ba .tagl.l{left:18px;} .ba .tagl.r{right:18px;}
-  .ba .handle{position:absolute; top:0; bottom:0; width:2px; background:var(--gold); z-index:5; left:70%;}
+  .ba .handle{position:absolute; top:0; bottom:0; width:2px; background:var(--gold); z-index:5; left:30%;}
   .ba .knob{
     position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
     width:46px; height:46px; border-radius:50%; background:var(--gold);
