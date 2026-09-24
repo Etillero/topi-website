@@ -125,7 +125,7 @@
 
   /* ---- HERO con fondo rotativo ---- */
   .hero{background:var(--bone); padding:88px 0 0; position:relative;}
-  .hero-body{display:grid; grid-template-columns:1.3fr .7fr; gap:60px; align-items:end; padding-bottom:50px;}
+  .hero-body{display:grid; grid-template-columns:1.3fr .7fr; gap:60px; align-items:start; padding-bottom:50px;}
   .hero h1{font-weight:800; font-size:clamp(34px,5.8vw,66px); line-height:1; letter-spacing:1.5px; max-width:13ch;}
   .hero .sub{font-size:16px; line-height:1.75; color:var(--ink-soft); max-width:40ch; margin-bottom:26px;}
   .hero .ctas{display:flex; gap:12px; flex-wrap:wrap;}
@@ -150,7 +150,7 @@
   /* ---- secciones ---- */
   .section{padding:100px 0;}
   .section.bone{background:var(--bone);}
-  .head{display:grid; grid-template-columns:1fr .85fr; gap:52px; align-items:end; margin-bottom:50px;}
+  .head{display:grid; grid-template-columns:1fr .85fr; gap:52px; align-items:start; margin-bottom:50px;}
   .head h2{font-weight:800; font-size:clamp(24px,3.6vw,42px); line-height:1.04; letter-spacing:1.5px; max-width:15ch;}
   .kicker{
     font-family:"Montserrat",sans-serif; font-weight:700; font-size:10.5px;
