@@ -383,10 +383,17 @@
     .team{grid-template-columns:1fr;}
     .track{grid-auto-columns:minmax(230px,1fr);}
 
-    .tabs{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;}
+    .tabs{position:relative; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;}
     .tabs::-webkit-scrollbar{display:none;}
     .tabs button{padding:13px 14px 11px; font-size:10.5px; white-space:nowrap; flex:0 0 auto;}
     .tabs button:first-child{padding-left:0;}
+    .tabs-wrap{position:relative;}
+    .tabs-wrap::after{
+      content:'\203A'; position:absolute; right:0; top:0; bottom:11px;
+      width:34px; display:flex; align-items:center; justify-content:flex-end;
+      font-size:18px; color:var(--ink-muted); opacity:.55; pointer-events:none;
+      background:linear-gradient(to right, rgba(255,255,255,0), var(--surface) 55%);
+    }
     .carousel-top{flex-direction:column; align-items:flex-start; gap:14px;}
     .totop{right:14px; bottom:14px;}
   }
