@@ -79,22 +79,6 @@
     });
   });
 
-  /* --- flechita de scroll de pestañas (mobile) --- */
-  var tabsEl = document.getElementById('tabs');
-  var tabsHint = document.getElementById('tabsScrollHint');
-  if (tabsEl && tabsHint) {
-    tabsHint.addEventListener('click', function(){
-      tabsEl.scrollBy({ left: 140, behavior: reduce ? 'auto' : 'smooth' });
-    });
-    var updateTabsHint = function(){
-      var atEnd = tabsEl.scrollLeft + tabsEl.clientWidth >= tabsEl.scrollWidth - 4;
-      var canScroll = tabsEl.scrollWidth > tabsEl.clientWidth + 4;
-      tabsHint.classList.toggle('is-hidden', atEnd || !canScroll);
-    };
-    tabsEl.addEventListener('scroll', updateTabsHint);
-    window.addEventListener('resize', updateTabsHint);
-    updateTabsHint();
-  }
 
   /* --- contadores --- */
   var statsEl = document.getElementById('stats');
