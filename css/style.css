@@ -38,19 +38,19 @@
     display:inline-flex; align-items:center; justify-content:center; text-decoration:none;
     font-family:"Montserrat",sans-serif; font-weight:600; font-size:12px;
     letter-spacing:.1em; text-transform:uppercase;
-    background:var(--gold); color:var(--gold-deep);
-    padding:17px 30px; border:1px solid var(--gold); cursor:pointer;
-    transition:transform .18s ease, box-shadow .18s ease;
+    background:var(--navy); color:var(--gold);
+    padding:17px 30px; border:1px solid var(--navy); cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
   }
-  .btn:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(138,106,30,.22);}
+  .btn:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(23,29,41,.28); background:#232b3b;}
   .btn-line{
     display:inline-flex; align-items:center; justify-content:center; text-decoration:none;
     font-family:"Montserrat",sans-serif; font-weight:600; font-size:12px;
     letter-spacing:.1em; text-transform:uppercase;
-    padding:16px 29px; border:1px solid var(--hair-2); color:var(--navy); background:transparent; cursor:pointer;
+    padding:16px 29px; border:1px solid var(--gold); color:var(--navy); background:var(--bone-2); cursor:pointer;
     transition:border-color .18s ease, background .18s ease;
   }
-  .btn-line:hover{border-color:var(--navy); background:rgba(23,29,41,.03);}
+  .btn-line:hover{border-color:var(--gold-ink); background:var(--bone);}
 
   .pend{
     display:inline-block; vertical-align:middle;
