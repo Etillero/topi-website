@@ -383,7 +383,9 @@
     .team{grid-template-columns:1fr;}
     .track{grid-auto-columns:minmax(230px,1fr);}
 
-    .tabs button{padding:13px 16px 11px; font-size:11px;}
+    .tabs{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;}
+    .tabs::-webkit-scrollbar{display:none;}
+    .tabs button{padding:13px 14px 11px; font-size:10.5px; white-space:nowrap; flex:0 0 auto;}
     .tabs button:first-child{padding-left:0;}
     .carousel-top{flex-direction:column; align-items:flex-start; gap:14px;}
     .totop{right:14px; bottom:14px;}
