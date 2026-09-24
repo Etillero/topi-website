@@ -56,30 +56,6 @@
     });
   });
 
-  /* --- acordeón de servicios (mobile): click en el título abre/cierra ese servicio --- */
-  var panelToggles = document.querySelectorAll('.panel-toggle');
-  var mobileQuery = window.matchMedia('(max-width:600px)');
-  panelToggles.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var panel = btn.closest('.panel');
-      var i = panel.getAttribute('data-panel');
-      var wasOpen = panel.classList.contains('on');
-      var willOpen = mobileQuery.matches ? !wasOpen : true;
-
-      panels.forEach(function(p){ p.classList.remove('on'); });
-      panelToggles.forEach(function(b){ b.setAttribute('aria-expanded', 'false'); });
-      tabs.forEach(function(t){ t.classList.remove('on'); });
-
-      if (willOpen) {
-        panel.classList.add('on');
-        btn.setAttribute('aria-expanded', 'true');
-        var matchingTab = document.querySelector('#tabs button[data-tab="' + i + '"]');
-        if (matchingTab) matchingTab.classList.add('on');
-      }
-    });
-  });
-
-
   /* --- contadores --- */
   var statsEl = document.getElementById('stats');
   function runCounters(){
