@@ -87,10 +87,10 @@
   .img-exterior1{background-image:url('../img/exterior-remodeling-client.png'); background-size:cover; background-position:center;}
   .img-deck-stairs{background-image:url('../img/deck-stairs.jpg'); background-size:cover; background-position:center;}
   .img-bar-finished{background-image:url('../img/bar-finished-v2.jpg'); background-size:cover; background-position:center;}
-  .img-materials{background-image:url('../img/materials-quikrete.jpg'); background-size:cover; background-position:center top;}
-  .img-fence-progress{background-image:url('../img/fence-progress.jpg'); background-size:cover; background-position:center;}
   .img-interior-work{background-image:url('../img/interior-work.jpg'); background-size:cover; background-position:center;}
-  .img-deck-wide{background-image:url('../img/deck-wide.jpg'); background-size:cover; background-position:center;}
+  .img-deck-client2{background-image:url('../img/deck-finished-client2.jpg'); background-size:cover; background-position:center;}
+  .img-living-fireplace{background-image:url('../img/living-room-fireplace.jpg'); background-size:cover; background-position:center;}
+  .img-bedroom-remodel{background-image:url('../img/bedroom-remodel.jpg'); background-size:cover; background-position:center;}
   .photo, .slide, .ba{border-radius:12px;}
   .photo.tag::after{content:"Reference photo"; background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
   .shot-tag{background:rgba(255,255,255,.88); border-color:transparent; color:rgba(40,38,32,.62);}
