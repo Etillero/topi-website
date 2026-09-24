@@ -71,6 +71,7 @@
   /* reference photos (not actual TOPI job sites) */
   .photo.img::before{display:none;}
   .img-kitchen{background-image:url('../img/cocina-1.jpg'); background-size:cover; background-position:center;}
+  .img-kitchen-remodel{background-image:url('../img/kitchen-remodel-finished.jpg'); background-size:cover; background-position:center;}
   .img-kitchen-story{background-image:url('../img/kitchen-story-v2.jpg'); background-size:cover; background-position:center;}
   .hover-layer{position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity .45s ease;}
   .hover-swap:hover .hover-layer{opacity:1;}
