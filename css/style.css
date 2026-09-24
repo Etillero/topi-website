@@ -383,8 +383,9 @@
     .team{grid-template-columns:1fr;}
     .track{grid-auto-columns:minmax(230px,1fr);}
 
-    .tabs{flex-wrap:wrap; justify-content:center; row-gap:2px; column-gap:4px;}
-    .tabs button{padding:13px 12px 11px; font-size:11px; white-space:nowrap; flex:0 0 auto;}
+    .tabs{display:grid; grid-template-columns:repeat(2, auto); justify-content:center; row-gap:2px; column-gap:6px;}
+    .tabs button{padding:13px 2px 11px; font-size:9.5px; letter-spacing:.09em; white-space:nowrap;}
+    .tabs button:nth-child(3){grid-column:1 / -1; justify-self:center;}
     .carousel-top{flex-direction:column; align-items:flex-start; gap:14px;}
     .totop{right:14px; bottom:14px;}
   }
