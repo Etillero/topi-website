@@ -97,29 +97,37 @@
   var track = document.getElementById('track');
   var cards = track.querySelectorAll('.slide-card');
   var dots = document.getElementById('dots');
+  function maxScroll(){ return track.scrollWidth - track.clientWidth; }
+  function currentIndex(){
+    var m = maxScroll();
+    if(m <= 0) return 0;
+    var frac = track.scrollLeft / m; // 0..1 across the whole scrollable range
+    return Math.round(frac * (cards.length - 1));
+  }
+  function goTo(i){
+    var m = maxScroll();
+    var idx = ((i % cards.length) + cards.length) % cards.length;
+    var left = cards.length > 1 ? (idx / (cards.length - 1)) * m : 0;
+    track.scrollTo({left: left, behavior: reduce ? 'auto' : 'smooth'});
+  }
   cards.forEach(function(_, i){
     var b = document.createElement('button');
     b.setAttribute('aria-label','Proyecto ' + (i+1));
     if(i === 0) b.classList.add('on');
-    b.addEventListener('click', function(){ track.scrollTo({left: cards[i].offsetLeft - track.offsetLeft, behavior: reduce ? 'auto' : 'smooth'}); });
+    b.addEventListener('click', function(){ goTo(i); });
     dots.appendChild(b);
   });
   function step(dir){
-    var w = cards[0].getBoundingClientRect().width + 22;
-    var maxScroll = track.scrollWidth - track.clientWidth;
-    if(dir === 1 && track.scrollLeft >= maxScroll - 2){
-      track.scrollTo({left: 0, behavior: reduce ? 'auto' : 'smooth'});
-    } else if(dir === -1 && track.scrollLeft <= 2){
-      track.scrollTo({left: maxScroll, behavior: reduce ? 'auto' : 'smooth'});
-    } else {
-      track.scrollBy({left: dir * w, behavior: reduce ? 'auto' : 'smooth'});
-    }
+    var i = currentIndex();
+    var next = i + dir;
+    if(next >= cards.length) next = 0;
+    else if(next < 0) next = cards.length - 1;
+    goTo(next);
   }
   document.getElementById('prev').addEventListener('click', function(){ step(-1); });
   document.getElementById('next').addEventListener('click', function(){ step(1); });
   track.addEventListener('scroll', function(){
-    var w = cards[0].getBoundingClientRect().width + 22;
-    var i = Math.round(track.scrollLeft / w);
+    var i = currentIndex();
     dots.querySelectorAll('button').forEach(function(d,k){ d.classList.toggle('on', k===i); });
   }, {passive:true});
 

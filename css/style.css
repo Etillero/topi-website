@@ -247,7 +247,7 @@
   .arrows button:disabled{opacity:.35; cursor:default;}
   .track{
     display:grid; grid-auto-flow:column; grid-auto-columns:minmax(330px,1fr);
-    gap:22px; overflow-x:auto; scroll-snap-type:x mandatory;
+    gap:22px; overflow-x:auto;
     scrollbar-width:none; padding-bottom:4px;
     -webkit-mask-image: linear-gradient(to right, transparent 0, #000 34px, #000 calc(100% - 34px), transparent 100%);
     mask-image: linear-gradient(to right, transparent 0, #000 34px, #000 calc(100% - 34px), transparent 100%);
