@@ -217,7 +217,7 @@
   /* ---- ANTES / DESPUÉS ---- */
   .ba{position:relative; height:480px; overflow:hidden; user-select:none; touch-action:none; cursor:ew-resize;}
   .ba .layer{position:absolute; inset:0;}
-  .ba .after{background-image:url('../img/basement-after-v2.jpg'); background-size:cover; background-position:center;}
+  .ba .after{background-image:url('../img/basement-after-v3.jpg'); background-size:cover; background-position:center;}
   .ba .before{background-image:url('../img/interior-before.jpg'); background-size:cover; background-position:center 75%; width:25%;}
   
   .ba .tagl{
