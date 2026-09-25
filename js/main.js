@@ -93,43 +93,60 @@
   ba.addEventListener('pointerup', function(){ dragging = false; });
   ba.addEventListener('pointercancel', function(){ dragging = false; });
 
-  /* --- carrusel de proyectos --- */
+  /* --- carrusel de proyectos: loop infinito real con clones fantasma --- */
   var track = document.getElementById('track');
-  var cards = track.querySelectorAll('.slide-card');
+  var allSlides = track.querySelectorAll('.slide-card');          // incluye los 2 clones (extremos)
+  var realCards = track.querySelectorAll('.slide-card:not([data-clone])');
   var dots = document.getElementById('dots');
-  function maxScroll(){ return track.scrollWidth - track.clientWidth; }
-  function currentIndex(){
-    var m = maxScroll();
-    if(m <= 0) return 0;
-    var frac = track.scrollLeft / m; // 0..1 across the whole scrollable range
-    return Math.round(frac * (cards.length - 1));
+  var n = realCards.length;               // proyectos reales (4)
+  var curReal = 0;                        // indice real activo (0..n-1)
+  var animating = false;
+  function domPos(domIdx){ return allSlides[domIdx].offsetLeft - track.offsetLeft; }
+  function jumpInstant(domIdx){ track.scrollTo({left: domPos(domIdx), behavior:'auto'}); }
+  function scrollToDom(domIdx, cb){
+    track.scrollTo({left: domPos(domIdx), behavior: reduce ? 'auto' : 'smooth'});
+    if(reduce){ cb(); return; }
+    setTimeout(cb, 460); // duracion aprox. del scroll smooth
   }
-  function goTo(i){
-    var m = maxScroll();
-    var idx = ((i % cards.length) + cards.length) % cards.length;
-    var left = cards.length > 1 ? (idx / (cards.length - 1)) * m : 0;
-    track.scrollTo({left: left, behavior: reduce ? 'auto' : 'smooth'});
+  function updateDots(){
+    dots.querySelectorAll('button').forEach(function(d,k){ d.classList.toggle('on', k === curReal); });
   }
-  cards.forEach(function(_, i){
+  realCards.forEach(function(_, i){
     var b = document.createElement('button');
     b.setAttribute('aria-label','Proyecto ' + (i+1));
     if(i === 0) b.classList.add('on');
-    b.addEventListener('click', function(){ goTo(i); });
+    b.addEventListener('click', function(){
+      if(animating || i === curReal) return;
+      animating = true;
+      scrollToDom(i + 1, function(){ curReal = i; updateDots(); animating = false; });
+    });
     dots.appendChild(b);
   });
   function step(dir){
-    var i = currentIndex();
-    var next = i + dir;
-    if(next >= cards.length) next = 0;
-    else if(next < 0) next = cards.length - 1;
-    goTo(next);
+    if(animating) return;
+    animating = true;
+    if(dir === 1){
+      if(curReal === n - 1){
+        // desliza hacia el clon del primero, y al llegar salta invisible al real 0
+        scrollToDom(n + 1, function(){ jumpInstant(1); curReal = 0; updateDots(); animating = false; });
+      } else {
+        var t = curReal + 1;
+        scrollToDom(t + 1, function(){ curReal = t; updateDots(); animating = false; });
+      }
+    } else {
+      if(curReal === 0){
+        // desliza hacia el clon del ultimo, y al llegar salta invisible al real n-1
+        scrollToDom(0, function(){ jumpInstant(n); curReal = n - 1; updateDots(); animating = false; });
+      } else {
+        var t2 = curReal - 1;
+        scrollToDom(t2 + 1, function(){ curReal = t2; updateDots(); animating = false; });
+      }
+    }
   }
   document.getElementById('prev').addEventListener('click', function(){ step(-1); });
   document.getElementById('next').addEventListener('click', function(){ step(1); });
-  track.addEventListener('scroll', function(){
-    var i = currentIndex();
-    dots.querySelectorAll('button').forEach(function(d,k){ d.classList.toggle('on', k===i); });
-  }, {passive:true});
+  jumpInstant(1); // arranca posicionado en el proyecto real 0 (oculta el clon del ultimo a la izquierda)
+  updateDots();
 
   /* --- reseñas --- */
   var quotes = document.querySelectorAll('.quote');

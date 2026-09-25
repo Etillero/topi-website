@@ -384,7 +384,8 @@
     .panel .photo.photo-wide{height:160px;}
     .ba{height:280px;}
     .team{grid-template-columns:1fr;}
-    .track{grid-auto-columns:minmax(230px,1fr);}
+    .slide-card{flex-basis:230px;}
+    .track-spacer{flex-basis:500px;}
 
     .tabs{display:grid; grid-template-columns:repeat(2, auto); justify-content:center; row-gap:2px; column-gap:6px;}
     .tabs button{padding:13px 2px 11px; font-size:9.5px; letter-spacing:.09em; white-space:nowrap;}
