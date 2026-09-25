@@ -143,10 +143,18 @@
       }
     }
   }
-  document.getElementById('prev').addEventListener('click', function(){ step(-1); });
-  document.getElementById('next').addEventListener('click', function(){ step(1); });
+  var trackTimer;
+  function startAutoplay(){ if(reduce) return; clearInterval(trackTimer); trackTimer = setInterval(function(){ step(1); }, 4200); }
+  function stopAutoplay(){ clearInterval(trackTimer); }
+  document.getElementById('prev').addEventListener('click', function(){ step(-1); startAutoplay(); });
+  document.getElementById('next').addEventListener('click', function(){ step(1); startAutoplay(); });
+  dots.addEventListener('click', function(){ startAutoplay(); });
+  track.addEventListener('mouseenter', stopAutoplay);
+  track.addEventListener('mouseleave', startAutoplay);
+  track.addEventListener('touchstart', stopAutoplay, {passive:true});
   jumpInstant(1); // arranca posicionado en el proyecto real 0 (oculta el clon del ultimo a la izquierda)
   updateDots();
+  startAutoplay();
 
   /* --- reseñas --- */
   var quotes = document.querySelectorAll('.quote');
