@@ -106,7 +106,14 @@
   });
   function step(dir){
     var w = cards[0].getBoundingClientRect().width + 22;
-    track.scrollBy({left: dir * w, behavior: reduce ? 'auto' : 'smooth'});
+    var maxScroll = track.scrollWidth - track.clientWidth;
+    if(dir === 1 && track.scrollLeft >= maxScroll - 2){
+      track.scrollTo({left: 0, behavior: reduce ? 'auto' : 'smooth'});
+    } else if(dir === -1 && track.scrollLeft <= 2){
+      track.scrollTo({left: maxScroll, behavior: reduce ? 'auto' : 'smooth'});
+    } else {
+      track.scrollBy({left: dir * w, behavior: reduce ? 'auto' : 'smooth'});
+    }
   }
   document.getElementById('prev').addEventListener('click', function(){ step(-1); });
   document.getElementById('next').addEventListener('click', function(){ step(1); });
@@ -114,8 +121,6 @@
     var w = cards[0].getBoundingClientRect().width + 22;
     var i = Math.round(track.scrollLeft / w);
     dots.querySelectorAll('button').forEach(function(d,k){ d.classList.toggle('on', k===i); });
-    document.getElementById('prev').disabled = track.scrollLeft <= 2;
-    document.getElementById('next').disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
   }, {passive:true});
 
   /* --- reseñas --- */
